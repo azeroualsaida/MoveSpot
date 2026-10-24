@@ -92,7 +92,34 @@ courses_container.innerHTML = temp
 //  - Faut-il un écouteur par carte, ou un seul sur le conteneur ? Quels sont les avantages ?
 //  - Comment retrouver le cours à partir de l'id lu dans la carte ?
 //  - Que faut-il réinitialiser quand on change de cours ?
+const cartes = courses_container.querySelectorAll('[data-id]');
 
+console.log(cartes);
+
+cartes.forEach(function (crt) {
+    crt.addEventListener('click', function (){
+        cartes.forEach( function (item) {
+
+            item.classList.remove("ring-2", "ring-teal-200");
+        })
+
+         crt.classList.add("ring-2", "ring-teal-200");
+
+         
+
+          summary_courses.textContent= crt.dataset.nom
+          // puis rechercher dans cours par l'id  
+//          function rechercherId (cours){
+//       const stockid = cours.find(function(cour) {
+//       return cour.id === idCrt
+
+//       console.log(stockid);
+//   })
+// }
+         // puis afficher le nom du cours trouvé par id
+        
+    })
+})
 // ------------------------------------------------------------
 // ÉTAPE 5 : Afficher et sélectionner un créneau (US03)
 // ------------------------------------------------------------
