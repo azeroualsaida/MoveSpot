@@ -131,7 +131,14 @@ cartes.forEach(function (crt) {
 //  - Quand cette fonction doit-elle être appelée ?
 //  - Que se passe-t-il si aucun cours n'est encore sélectionné ?
 
-
+function affichageCreneau (creneaus){
+const idCrt = crt.getAttribute('data-id');
+const stockCour = cours.find( function (item){
+    return item.id  === idCrt
+stockCour.creneaux   
+ 
+}) 
+}
 // ------------------------------------------------------------
 // ÉTAPE 6 : Afficher le plan de la salle (US04)
 // ------------------------------------------------------------
